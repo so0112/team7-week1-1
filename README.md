@@ -163,11 +163,8 @@ axios inpercepter 를 통해서 api 통신시 반복되는 header, token을
 
 ## 📝 팀 컨벤션
 
-<details>
-<summary>코드 컨벤션</summary>
-<div markdown="1">
 
-# Code Convention
+### Code Convention
 
 - 변수명 : 카멜케이스
 - 함수명
@@ -269,8 +266,6 @@ export function LoginPage(){
 |`Chore`|빌드 업무 수정, 패키지 매니저 수정|
 
 
-</div>
-</details>
 
 
 
