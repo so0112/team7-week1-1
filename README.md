@@ -56,8 +56,7 @@ https://team7-week1-1.vercel.app/todo
 
 
 
-
-## 1. 로그인 / 회원가입
+# Best Practice 
 
 ## 1. 로그인 / 회원가입
 - 회원가입 이메일, 비밀번호 유효성 검사
