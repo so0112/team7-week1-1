@@ -111,7 +111,7 @@ export const postLogin = async (LOGIN_URL, email, password, setIsError) => {
 
 
 
-## 2. 리다이렉
+## 2. 리다이렉션 
 - useEffect
 ```javascript
 const isLogin = Boolean(localStorage.getItem('token'));
