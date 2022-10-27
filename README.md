@@ -25,17 +25,6 @@
 
 ## 👥 팀원소개
 
-|이름|Github|
-|:-----:|:------:|
-|신상오(팀장)|[so0112](https://github.com/so0112)|
-|권내영(부팀장)|[nyoung113](https://github.com/nyoung113)|
-|임채동|[Chaedie](https://github.com/Chaedie)|
-|소재현|[socow](https://github.com/socow)|
-|문민종|[viaDPBell](https://github.com/viaDPBell)|
-|문이슬|[Leeseul-Moon](https://github.com/Leeseul-Moon)|
-|이재하|[idjaeha](https://github.com/idjaeha)|
-|한승범|[hanseungbum](https://github.com/hanseungbum)|
-
 |이름|신상오(팀장)|권내영(부팀장)|임채동|소재현|문민종|문이슬|이재하|한승범|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |Github|[so0112](https://github.com/so0112)|[nyoung113](https://github.com/nyoung113)|[Chaedie](https://github.com/Chaedie)|[socow](https://github.com/socow)|[viaDPBell](https://github.com/viaDPBell)|[Leeseul-Moon](https://github.com/Leeseul-Moon)|[idjaeha](https://github.com/idjaeha)|[hanseungbum](https://github.com/hanseungbum)|
