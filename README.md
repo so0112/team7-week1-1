@@ -36,6 +36,10 @@
 |이재하|[idjaeha](https://github.com/idjaeha)|
 |한승범|[hanseungbum](https://github.com/hanseungbum)|
 
+|신상오(팀장)|권내영(부팀장)|임채동|소재현|문민종|
+|:-:|:-:|:-:|:-:|:-:|
+|[so0112](https://github.com/so0112)|[nyoung113](https://github.com/nyoung113)|[Chaedie](https://github.com/Chaedie)|[socow](https://github.com/socow)|[viaDPBell](https://github.com/viaDPBell)|
+
 ## 🔗 배포 링크
 https://team7-week1-1.vercel.app/todo
 
