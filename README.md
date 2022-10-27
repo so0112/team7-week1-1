@@ -20,11 +20,11 @@
 
 |이름|Github 주소|
 |:-----:|:------|
-|신상오(팀장)|[!so0112]("https://github.com/so0112")|
-|권내영(부팀장)|[!nyoung113]("https://github.com/nyoung113")|
-|임채동|[!Chaedie]("https://github.com/Chaedie")|
-|소재현|[!socow]("https://github.com/socow")|
-|문민종|[!viaDPBell]("https://github.com/viaDPBell")|
-|문이슬|[!Leeseul-Moon]("https://github.com/Leeseul-Moon")|
-|이재하|[!idjaeha]("https://github.com/idjaeha")|
-|한승범|[!hanseungbum]("https://github.com/hanseungbum")|
+|신상오(팀장)|[so0112](https://github.com/so0112)|
+|권내영(부팀장)|[nyoung113](https://github.com/nyoung113)|
+|임채동|[Chaedie](https://github.com/Chaedie)|
+|소재현|[socow](https://github.com/socow)|
+|문민종|[viaDPBell](https://github.com/viaDPBell)|
+|문이슬|[Leeseul-Moon](https://github.com/Leeseul-Moon)|
+|이재하|[idjaeha](https://github.com/idjaeha)|
+|한승범|[hanseungbum](https://github.com/hanseungbum)|
