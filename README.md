@@ -36,13 +36,13 @@
 |이재하|[idjaeha](https://github.com/idjaeha)|
 |한승범|[hanseungbum](https://github.com/hanseungbum)|
 
-## 기술 스택
+## ⚒️ 기술 스택
 
 
-## 배포 링크
+## 🔗 배포 링크
 https://team7-week1-1.vercel.app/todo
 
-## 프로젝트 실행 방법
+## 📝 프로젝트 실행 방법
 1. 패키지 설치 <br />
 `npm install`
 2. 실행 <br />
@@ -50,7 +50,7 @@ https://team7-week1-1.vercel.app/todo
 3. http://localhost:3000 에서 확인가능 <br />
 `open http://localhost:3000`
 
-## 디렉토리 및 파일구조
+## 🗂️ 디렉토리 및 파일구조
 ![image](https://user-images.githubusercontent.com/55952886/198363817-55fe093d-14f3-4b17-9378-76ca12ff3f35.png)
 
 
