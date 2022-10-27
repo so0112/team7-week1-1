@@ -43,36 +43,16 @@
 https://team7-week1-1.vercel.app/todo
 
 ## 프로젝트 실행 방법
-1. 패키지 설치
+1. 패키지 설치 <br />
 `npm install`
-2. 실행
+2. 실행 <br />
 `npm run start`
-3. http://localhost:3000 에서 확인가능
+3. http://localhost:3000 에서 확인가능 <br />
 `open http://localhost:3000`
 
 ## 디렉토리 및 파일구조
-📦src
- ┣ 📂apis
- ┃ ┣ 📜api.js
- ┃ ┣ 📜login.js
- ┃ ┣ 📜signup.js
- ┃ ┗ 📜todo.js
- ┣ 📂components
- ┃ ┣ 📜InputGroup.jsx
- ┃ ┣ 📜Login.jsx
- ┃ ┣ 📜Signup.jsx
- ┃ ┣ 📜Todo.jsx
- ┃ ┗ 📜TodoList.jsx
- ┣ 📂hooks
- ┃ ┗ 📜useCheck.js
- ┣ 📂pages
- ┃ ┣ 📜LoginPage.jsx
- ┃ ┣ 📜SignupPage.jsx
- ┃ ┗ 📜TodoPage.jsx
- ┣ 📂utils
- ┃ ┗ 📜checkSignup.js
- ┣ 📜App.js
- ┗ 📜index.js
+![image](https://user-images.githubusercontent.com/55952886/198363817-55fe093d-14f3-4b17-9378-76ca12ff3f35.png)
+
 
 
 
