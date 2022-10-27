@@ -161,7 +161,7 @@ axios inpercepter 를 통해서 api 통신시 반복되는 header, token을
 생략할 수 있도록 코드 작성, 불필요한 코드 반복을 피하고 가독성을 높일 수 있었습니다
 
 
-## 📝 팀 코드, 커밋 컨벤션
+## 📝 팀 컨벤션
 
 <details>
 <summary>코드 컨벤션</summary>
@@ -255,10 +255,9 @@ export function LoginPage(){
         - 이름/feature : 기능별 브랜치 분리하여 작업
 - Merge Convention
     - merge approval by Chaedie
-
-</div>
-</details>
-
+	
+- Commit Convention
+	
 |Tag Name|Description|
 |:-----:|:------|
 |`Feat`|새로운 기능 추가|
@@ -268,6 +267,10 @@ export function LoginPage(){
 |`Refactor`|코드 리팩토링|
 |`Test`|테스트 추가, 테스트 리팩토링|
 |`Chore`|빌드 업무 수정, 패키지 매니저 수정|
+
+
+</div>
+</details>
 
 
 
