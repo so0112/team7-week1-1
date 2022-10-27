@@ -164,57 +164,6 @@ axios inpercepter 를 통해서 api 통신시 반복되는 header, token을
 생략할 수 있도록 코드 작성, 불필요한 코드 반복을 피하고 가독성을 높일 수 있었습니다
 
 
-### CREATE
-```javascript
- <TodoForm onSubmit={submitTodo}>
-        <h1>Todo List</h1>
-        <div className="todo-input">
-          <InputGroup
-            className="post-input"
-            placeholder="todo 생성하기"
-            value={todo}
-            setValue={setTodo}
-          />
-
-          <button type="button" className="post-button" onClick={submitTodo}>
-            +
-          </button>
-        </div>
-      </TodoForm>
-```
-```
-const submitTodo = event => {
-    event.preventDefault();
-    postTodo({ todo, setTodo, datas, setDatas });
-  };
-```
-```
-```
-👍 Best Practice 선정 이유
-
-### READ
-👍 Best Practice 선정 이유
-
-### UPDATE
-👍 Best Practice 선정 이유
-
-### DELETE
-- DELETE 버튼
-```javascript
- <button
-  className="delete-button"
-  onClick={() => deleteTodo({ id: id, setDatas })}
-  />
-```
-- DELETE api
-```javascript
-export const deleteTodo = async ({ id, setDatas }) => {
-  await instance
-    .delete(`${TODO_URL}/${id}`)
-    .then(res => getTodos({ setDatas }))
-    .catch(err => {});
-};
-```
 👍 Best Practice 선정 이유
 기능별로 분리가 잘 이뤄짐
 
