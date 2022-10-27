@@ -23,6 +23,92 @@
 
 - 금요일 12:00PM (정오)
 
+
+
+## 배포 링크
+https://team7-week1-1.vercel.app/todo
+
+## 프로젝트 실행 방법
+1. git clone 
+
+
+## 팀원소개
+
+
+
+## 디렉토리 및 파일구조
+
+
+
+
+## 1. 로그인 / 회원가입
+
+
+
+## 2. 리다이렉트
+- useEffect
+```javascript
+const isLogin = Boolean(localStorage.getItem('token'));
+const navigate = useNavigate();
+
+useEffect(() => {
+    if (isLogin) {
+      navigate('/todo');
+    }
+  }, [isLogin, navigate]);
+```
+➡️ Best Practice 선정 이유
+페이지 렌더링시에 토큰의 유무를 확인하여 간단하게 페이지 리다이렉션이 가능
+
+
+## 3. TODO CRUD
+- axios inpercepter 사용
+`src/apis/api.js`
+```javascript
+import axios from 'axios';
+
+const ACCESS_TOKEN = localStorage.getItem('token');
+
+// baseURL: process.env.REACT_BASE_URL,
+export const instance = axios.create({
+  baseURL: `https://pre-onboarding-selection-task.shop`,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+
+instance.interceptors.request.use(
+  function (config) {
+    if (ACCESS_TOKEN) {
+      config.headers.Authorization = `Bearer ${ACCESS_TOKEN}`;
+    } else {
+      config.headers.Authorization = `Bearer ${localStorage.getItem('token')}`;
+    }
+    return config;
+  },
+  function (error) {
+    return Promise.reject(error);
+  }
+);
+```
+
+➡️ Best Practice 선정 이유
+api 통신시 반복되는 header, token을 
+생략할 수 있도록 코드 작성함으로써 불필요한 코드 반복을 피하고 가독성을 높일 수 있었음
+
+
+### CREATE
+
+
+### READ
+
+
+### UPDATE
+
+
+### DELETE
+
+
 ## 📝 팀 깃 커밋 컨벤션
 
 |Tag Name|Description|
