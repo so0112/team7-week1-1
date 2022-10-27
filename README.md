@@ -201,10 +201,10 @@ const submitTodo = event => {
 ### DELETE
 - DELETE 버튼
 ```javascript
- <BsFillTrashFill
-                  className="delete-button"
-                  onClick={() => deleteTodo({ id: id, setDatas })}
-                />
+ <button
+  className="delete-button"
+  onClick={() => deleteTodo({ id: id, setDatas })}
+  />
 ```
 - DELETE api
 ```javascript
