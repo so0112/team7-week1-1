@@ -42,7 +42,7 @@ https://team7-week1-1.vercel.app/todo
 
 ## 🗂️ 디렉토리 및 파일구조
 ![image](https://user-images.githubusercontent.com/55952886/198363817-55fe093d-14f3-4b17-9378-76ca12ff3f35.png)
-1. apis : api 통신 
+1. apis : api 통신 함수 관리
 2. Components : 공통된 컴포넌트 관리
 3. hooks : 공통으로 사용되는 hooks 관리
 4. pages : 페이지 단위 컴포넌트 폴더
