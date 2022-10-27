@@ -23,29 +23,116 @@
 
 - 금요일 12:00PM (정오)
 
+## 👥 팀원소개
+
+|이름|Github|
+|:-----:|:------:|
+|신상오(팀장)|[so0112](https://github.com/so0112)|
+|권내영(부팀장)|[nyoung113](https://github.com/nyoung113)|
+|임채동|[Chaedie](https://github.com/Chaedie)|
+|소재현|[socow](https://github.com/socow)|
+|문민종|[viaDPBell](https://github.com/viaDPBell)|
+|문이슬|[Leeseul-Moon](https://github.com/Leeseul-Moon)|
+|이재하|[idjaeha](https://github.com/idjaeha)|
+|한승범|[hanseungbum](https://github.com/hanseungbum)|
+
+## 기술 스택
 
 
 ## 배포 링크
 https://team7-week1-1.vercel.app/todo
 
 ## 프로젝트 실행 방법
-1. git clone 
-
-
-## 팀원소개
-
-
+1. 패키지 설치
+`npm install`
+2. 실행
+`npm run start`
+3. http://localhost:3000 에서 확인가능
+`open http://localhost:3000`
 
 ## 디렉토리 및 파일구조
+📦src
+ ┣ 📂apis
+ ┃ ┣ 📜api.js
+ ┃ ┣ 📜login.js
+ ┃ ┣ 📜signup.js
+ ┃ ┗ 📜todo.js
+ ┣ 📂components
+ ┃ ┣ 📜InputGroup.jsx
+ ┃ ┣ 📜Login.jsx
+ ┃ ┣ 📜Signup.jsx
+ ┃ ┣ 📜Todo.jsx
+ ┃ ┗ 📜TodoList.jsx
+ ┣ 📂hooks
+ ┃ ┗ 📜useCheck.js
+ ┣ 📂pages
+ ┃ ┣ 📜LoginPage.jsx
+ ┃ ┣ 📜SignupPage.jsx
+ ┃ ┗ 📜TodoPage.jsx
+ ┣ 📂utils
+ ┃ ┗ 📜checkSignup.js
+ ┣ 📜App.js
+ ┗ 📜index.js
 
 
 
 
 ## 1. 로그인 / 회원가입
 
+## 1. 로그인 / 회원가입
+- 회원가입 이메일, 비밀번호 유효성 검사
+```javascript
+useCheck(checkEmail, email, setIsEmail);
+useCheck(checkPassword, password, setIsPassword);
+```
+- 유효성 검사 커스텀훅 src/hooks/useCheck.js
+```javascript
+/** 유효성 검사 커스텀 훅
+ *
+ * checkFunction : 유효성 검사 함수
+ * checkedArg : checkFunction의 인자
+ *
+ * setIsState : 변경할 상태
+ */
+export default function useCheck(checkFunction, checkedArg, setIsState) {
+  useEffect(() => {
+    setIsState(checkFunction(checkedArg));
+  }, [checkFunction, checkedArg, setIsState]);
+}
+```
+- 로그인 form submit 함수
+```javascript
+  const submitLogin = async event => {
+    event.preventDefault();
+    postLogin(LOGIN_URL, email, password, setIsError);
+  };
+```
+- 로그인 post 요청
+```javascript
+export const postLogin = async (LOGIN_URL, email, password, setIsError) => {
+  await instance
+    .post(LOGIN_URL, {
+      email,
+      password,
+    })
+    .then(res => {
+      localStorage.setItem('token', res.data.access_token);
+      window.location.replace('/todo');
+    })
+    .catch(error => {
+      setIsError(true);
+    });
+};
+```
+
+👍 Best Practice 선정 이유
+
+회원가입, 로그인 컴포넌트에서 유효성 검사 함수, Hooks, api 요청부를
+분리하여 기능별로 쉽게 구분할 수 있도록 작성했습니다
 
 
-## 2. 리다이렉트
+
+## 2. 리다이렉
 - useEffect
 ```javascript
 const isLogin = Boolean(localStorage.getItem('token'));
@@ -57,8 +144,9 @@ useEffect(() => {
     }
   }, [isLogin, navigate]);
 ```
-➡️ Best Practice 선정 이유
-페이지 렌더링시에 토큰의 유무를 확인하여 간단하게 페이지 리다이렉션이 가능
+👍 Best Practice 선정 이유
+
+페이지 렌더링시에 토큰의 유무를 확인하여 간단하게 페이지 리다이렉션이 가능하도록 작성했습니다
 
 
 ## 3. TODO CRUD
@@ -93,21 +181,22 @@ instance.interceptors.request.use(
 ```
 
 ➡️ Best Practice 선정 이유
-api 통신시 반복되는 header, token을 
-생략할 수 있도록 코드 작성함으로써 불필요한 코드 반복을 피하고 가독성을 높일 수 있었음
+
+axios inpercepter 를 통해서 api 통신시 반복되는 header, token을 
+생략할 수 있도록 코드 작성, 불필요한 코드 반복을 피하고 가독성을 높일 수 있었습니다
 
 
 ### CREATE
-
+👍 Best Practice 선정 이유
 
 ### READ
-
+👍 Best Practice 선정 이유
 
 ### UPDATE
-
+👍 Best Practice 선정 이유
 
 ### DELETE
-
+👍 Best Practice 선정 이유
 
 ## 📝 팀 깃 커밋 컨벤션
 
@@ -121,17 +210,6 @@ api 통신시 반복되는 header, token을
 |`Test`|테스트 추가, 테스트 리팩토링|
 |`Chore`|빌드 업무 수정, 패키지 매니저 수정|
 
-## 👥 팀원소개
 
-|이름|Github|
-|:-----:|:------:|
-|신상오(팀장)|[so0112](https://github.com/so0112)|
-|권내영(부팀장)|[nyoung113](https://github.com/nyoung113)|
-|임채동|[Chaedie](https://github.com/Chaedie)|
-|소재현|[socow](https://github.com/socow)|
-|문민종|[viaDPBell](https://github.com/viaDPBell)|
-|문이슬|[Leeseul-Moon](https://github.com/Leeseul-Moon)|
-|이재하|[idjaeha](https://github.com/idjaeha)|
-|한승범|[hanseungbum](https://github.com/hanseungbum)|
 
 
