@@ -164,9 +164,6 @@ axios inpercepter 를 통해서 api 통신시 반복되는 header, token을
 생략할 수 있도록 코드 작성, 불필요한 코드 반복을 피하고 가독성을 높일 수 있었습니다
 
 
-👍 Best Practice 선정 이유
-기능별로 분리가 잘 이뤄짐
-
 ## 📝 팀 깃 커밋 컨벤션
 
 |Tag Name|Description|
