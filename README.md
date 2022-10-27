@@ -36,9 +36,6 @@
 |이재하|[idjaeha](https://github.com/idjaeha)|
 |한승범|[hanseungbum](https://github.com/hanseungbum)|
 
-## ⚒️ 기술 스택
-
-
 ## 🔗 배포 링크
 https://team7-week1-1.vercel.app/todo
 
@@ -164,7 +161,117 @@ axios inpercepter 를 통해서 api 통신시 반복되는 header, token을
 생략할 수 있도록 코드 작성, 불필요한 코드 반복을 피하고 가독성을 높일 수 있었습니다
 
 
-## 📝 팀 깃 커밋 컨벤션
+## 📝 팀 코드, 커밋 컨벤션
+
+<details>
+<summary>코드 컨벤션</summary>
+<div markdown="1">
+
+# Code Convention
+
+- 변수명 : 카멜케이스
+- 함수명
+    - 기능 함수 → 화살표 함수 : 카멜케이스
+    - export 사용
+    
+    ```jsx
+    export const foo = () => {
+    	return 'bar'
+    }
+    ```
+    
+    - 컴포넌트 함수 → 일반 함수 : 파스칼케이스
+    
+    ```jsx
+    export function Foo() {
+    	return (<h1>hello world</h1>)
+    }
+    ```
+    
+- 폴더 구조
+    - 폴더명 : 카멜케이스 <복수>
+    - 파일명
+        - 컴포넌트 파일 → 파스칼 케이스, ‘.jsx’ / tsx
+        - 이외 파일 → 카멜 케이스, ‘.js’ / ts
+
+```jsx
+[src]
+	⌙ [components]
+		⌙ index.js
+		⌙ Login.jsx
+	⌙ [apis]
+		⌙ api.js
+		⌙ todo.js
+		⌙ user.js
+	⌙ [hooks]
+		⌙ useCheck.js
+	⌙ [pages]
+		⌙ index.js
+		⌙ LoginPage.jsx
+		⌙ TodoPage.jsx
+```
+
+- 파일 명
+    
+    페이지 컴포넌트는 `~Page` 으로 작성하고, 파일 명도 컴포넌트와 동일하게 작성합니다. 
+    
+
+```jsx
+export function LoginPage(){
+	...
+}
+```
+
+- 파일 작성 순서
+    
+    각 파일은 Import / Interface(type) - ts 사용 시 / main / styled / export 순으로 작성
+    
+    ```tsx
+    import ...
+    
+    interface ...
+    
+    function component(){
+    }
+    
+    const styledSome = styled.div``
+    
+    export ...
+    ```
+    
+- styled-component 사용 시 객체에 담아서 사용
+    
+    ```jsx
+    const S = {
+    	Wrap: styled.div`
+    		display : flex;
+    		align-items : center;
+    	`
+    }
+    ```
+    
+
+# Commit Convention
+
+- Commit Convention
+    - Feat: 새로운 기능 추가
+    - Fix: 버그 수정
+    - Docs: 문서 수정
+    - Style: 코드 포캣팅, 세미콜론 누락, 코드 변경이 없는 경우
+    - Refactor: 코드 리펙토링
+    - Test: 테스트 코드, 리펙토링 테스트 코드 추가
+    - Chore: 빌드 업무 수정, 패키지 매니저 수정
+- ⁉️ 리베이스 여부는 정해야 됨
+    - 
+- Branch Convention
+    - main
+    - 이름 : 각자이름으로 브랜치를 파주세요.
+        - 이름/feature : 기능별 브랜치 분리하여 작업
+- Merge Convention
+    - merge approval by Chaedie
+
+</div>
+</details>
 
 |Tag Name|Description|
 |:-----:|:------|
@@ -175,6 +282,7 @@ axios inpercepter 를 통해서 api 통신시 반복되는 header, token을
 |`Refactor`|코드 리팩토링|
 |`Test`|테스트 추가, 테스트 리팩토링|
 |`Chore`|빌드 업무 수정, 패키지 매니저 수정|
+
 
 
 
