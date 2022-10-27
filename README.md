@@ -253,7 +253,7 @@ export function LoginPage(){
     - main
     - 이름 : 각자이름으로 브랜치를 파주세요.
         - 이름/feature : 기능별 브랜치 분리하여 작업
-- Merge Convention
+- Merge Convention (PR 승인한 인원 )
     - merge approval by Chaedie
 	
 - Commit Convention
